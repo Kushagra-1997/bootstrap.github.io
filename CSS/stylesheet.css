@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header#head>div {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* background Image & Animation starts here */
+
+header#head {
+    position: relative;
+}
+
+figure.main_banner>img {
+    z-index: -1;
+}
+
+figure.main_banner>img.img-fluid.img_height {
+    height: 100vh;
+    width: 100%;
+}
+
+.annimation_one {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 40%;
+    z-index: 2;
+    animation: mymove 5s;
+}
+
+@keyframes mymove {
+    from {
+        top: 40%;
+        left: 5%;
+        transform: scale(0.2);
+    }
+    to {
+        top: 40%;
+        left: 40%;
+        transform: scale(1.0);
+    }
+}
+
+figure.earth_banner>img {
+    position: absolute;
+    top: 28%;
+    right: 35%;
+    max-width: 25%;
+    max-height: 300px;
+}
+
+figure.earth_banner>img {
+    position: absolute;
+    color: white;
+    top: 28%;
+    right: 35%;
+    opacity: .5;
+    z-index: 1;
+    animation: mynewmove 5s;
+}
+
+@keyframes mynewmove {
+    from {
+        top: 28%;
+        right: 5%;
+        transform: scale(0.2);
+    }
+    to {
+        top: 28%;
+        right: 35%;
+        transform: scale(1.0);
+    }
+}
+
+
+/* background Image & Animation ends here */
+
+
+/* Navbar starts here */
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background: #b5c564!important;
+    margin-top: -55px;
+    opacity: 1;
+    animation: move_1 10s linear;
+}
+
+@keyframes move_1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*  
+
+.annimation_one {
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 35%;
+        z-index: 2;
+        animation: mymove 5s linear;
+    }
+    @keyframes mymove {
+        from {
+            top: 40%;
+            left: 5%;
+        }
+        to {
+            top: 40%;
+            left: 35%;
+        }
+    }
+}
+
+*/
+
+.cstm_height {
+    display: flex;
+    align-items: center;
+}
+
+.cstm_height>img {
+    height: 25px;
+    width: 25px;
+    margin: 0 0 0 0;
+}
+
+.navsticy {
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+
+/* Navbar ends here */
+
+figure.flower_pot_pic {
+    position: sticky;
+    top: 20%;
+}
+
+
+/* accordion starts here*/
+
+.accordion {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: bolder;
+    transition: 0.4s;
+}
+
+.cstm_accordion>.active,
+.accordion:hover {
+    outline: 0px solid transparent;
+    background-color: #0ae24f;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.8s ease-out;
+}
+
+button.accordion.bullet_before {
+    position: relative;
+    padding-left: 45px;
+    transition: .5s linear;
+}
+
+button.accordion.bullet_before::before {
+    content: '\f0da';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 15px;
+    font-size: 25px!important;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button.accordion.bullet_before.active::before {
+    content: '\f0d7';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 15px;
+    font-size: 25px!important;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button.accordion.bullet_before.active {
+    padding-left: 45px;
+    transition: .5s linear;
+}
+
+
+/* accordion ends here*/
+
+
+/* Footer starts here */
+
+
+/* Footer ends here */
+
+
+/* Media Query Starts here */
+
+@media (max-width: 768px) {
+    .annimation_one,
+    figure.earth_banner>img {
+        top: 45%!important;
+        left: 50%!important;
+        transform: translate(-50%, -50%)!important;
+    }
+}
+
+@media (max-width: 992px) {
+    .annimation_one>h2 {
+        font-size: 25px;
+    }
+    .annimation_one {
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 35%;
+        z-index: 2;
+        animation: mymove 5s linear;
+    }
+    @keyframes mymove {
+        from {
+            top: 40%;
+            left: 5%;
+        }
+        to {
+            top: 40%;
+            left: 35%;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    figure.main_banner>img.img-fluid.img_height {
+        height: auto;
+        max-width: 100%!important;
+    }
+    figure.flower_pot_pic {
+        position: sticky;
+        top: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .annimation_one>h2 {
+        font-size: 15px!important;
+    }
+    .annimation_one,
+    figure.earth_banner>img {
+        top: 40%!important;
+        left: 50%!important;
+        transform: translate(-50%, -50%)!important;
+    }
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+/* Media Query end here */
